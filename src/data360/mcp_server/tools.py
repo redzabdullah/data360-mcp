@@ -850,7 +850,6 @@ get_data_api_url = mcp.tool(
 get_viz_spec = mcp.tool(
     instrument_mcp_tool(_get_viz_spec, tool_name="data360_get_viz_spec"),
     name="data360_get_viz_spec",
-    app=AppConfig(resource_uri="ui://data360-chart/index.html"),
 )
 
 get_multi_indicator_viz_spec = mcp.tool(
@@ -859,7 +858,6 @@ get_multi_indicator_viz_spec = mcp.tool(
         tool_name="data360_get_multi_indicator_viz_spec",
     ),
     name="data360_get_multi_indicator_viz_spec",
-    app=AppConfig(resource_uri="ui://data360-chart/index.html"),
 )
 
 get_supported_chart_types = mcp.tool(
@@ -925,7 +923,6 @@ def data360_chart_html() -> str:
 
 @mcp.tool(
     name="data360_interactive_choices",
-    app=AppConfig(resource_uri="ui://data360-choice/index.html", prefers_border=False),
 )
 async def data360_interactive_choices(
     prompt: str,
